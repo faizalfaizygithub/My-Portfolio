@@ -8,10 +8,10 @@ class ScreenFive extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.grey.shade300,
+      color: Colors.grey.shade100,
       child: Column(
         children: [
-          Gyapp(gyap: 70),
+          Gyapp(gyap: 220),
           SkillText(
               textname: 'Portfolio ', txtweight: FontWeight.bold, txtSize: 35),
           Text('_____*_____'),
@@ -35,6 +35,7 @@ class ScreenFive extends StatelessWidget {
             photo: instapic,
             photoAction: () {},
           ),
+          Gyapp(gyap: 30),
         ],
       ),
     );

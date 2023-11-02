@@ -10,13 +10,13 @@ class ScreenFour extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.grey.shade300,
+      color: Colors.grey.shade100,
       child: Column(children: [
-        Gyapp(gyap: 50),
+        Gyapp(gyap: 200),
         SkillText(
             textname: 'Services ', txtweight: FontWeight.bold, txtSize: 35),
         Text('_____*_____'),
-        Gyapp(gyap: 30),
+        Gyapp(gyap: 70),
         ServiceCard(
           logo: flutterlogopic,
           caption: fluttercaption,

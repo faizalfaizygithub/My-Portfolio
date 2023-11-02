@@ -12,7 +12,7 @@ class ScreenTwo extends StatelessWidget {
     return Card(
         child: Column(
       children: [
-        Gyapp(gyap: 20),
+        Gyapp(gyap: 150),
         const Text(
           'About Me',
           style: TextStyle(
@@ -28,12 +28,13 @@ class ScreenTwo extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
+        Gyapp(gyap: 100),
         const Text(
           'Hello..',
           style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(15.0),
           child: Text(
             abouttitle,
             style: const TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
@@ -63,8 +64,9 @@ class ScreenTwo extends StatelessWidget {
           textName2: 'mywork.co.in/faizal',
           fontWeight: FontWeight.bold,
         ),
-        space,
-        Buttons()
+        Gyapp(gyap: 20),
+        Buttons(),
+        Gyapp(gyap: 40)
       ],
     ));
   }
