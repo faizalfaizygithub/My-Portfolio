@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/assets.dart';
 import 'package:portfolio/button.dart';
+import 'package:portfolio/gyap.dart';
 import 'package:portfolio/myData.dart';
 
 class ScreenTwo extends StatelessWidget {
@@ -11,18 +12,14 @@ class ScreenTwo extends StatelessWidget {
     return Card(
         child: Column(
       children: [
+        Gyapp(gyap: 20),
         const Text(
           'About Me',
           style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontStyle: FontStyle.italic,
-              fontSize: 35),
+              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30),
         ),
-        const Text(
-          '>>>>>>>>>>>',
-          style: TextStyle(fontSize: 30),
-        ),
+        Text('_____*_____'),
+        Gyapp(gyap: 30),
         Container(
           height: MediaQuery.of(context).size.height * 0.7,
           width: MediaQuery.of(context).size.width,

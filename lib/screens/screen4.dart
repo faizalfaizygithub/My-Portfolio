@@ -15,6 +15,7 @@ class ScreenFour extends StatelessWidget {
         Gyapp(gyap: 50),
         SkillText(
             textname: 'Services ', txtweight: FontWeight.bold, txtSize: 35),
+        Text('_____*_____'),
         Gyapp(gyap: 30),
         ServiceCard(
           logo: flutterlogopic,

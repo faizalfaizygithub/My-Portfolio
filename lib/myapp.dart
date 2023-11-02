@@ -24,9 +24,9 @@ class MyApp extends StatelessWidget {
           title: const Text(
             'Muhammed Faisal v \n flutter developer ',
             style: TextStyle(
-              fontFamily: 'my name',
-              fontSize: 25,
-            ),
+                fontFamily: 'my name',
+                fontSize: 25,
+                fontWeight: FontWeight.bold),
           ),
           toolbarHeight: 100,
           titleTextStyle: const TextStyle(

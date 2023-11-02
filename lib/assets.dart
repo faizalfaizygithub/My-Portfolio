@@ -1,3 +1,12 @@
+String vkStorepic = 'assets/images/cart.jpg';
+String bloodpic = 'assets/images/blood.webp';
+String instapic = 'assets/images/insta.png';
+String tripepic = 'assets/images/trip.jpg';
+String tripe2pic = 'assets/images/trip2.webp';
+String vkpic = 'assets/images/vk.webp';
+String shoppic = 'assets/images/shop.webp';
+String shop2pic = 'assets/images/shop.jpg';
+String shoppingpic = 'assets/images/shopping.jpg';
 //logo
 String birdpic = 'assets/images/bird.jpg';
 String codepic = 'assets/images/code.jpg';

@@ -16,8 +16,7 @@ class ScreenThree extends StatelessWidget {
           Gyapp(gyap: 50),
           SkillText(
               textname: 'Skills', txtweight: FontWeight.bold, txtSize: 30),
-          SkillText(
-              textname: '¬¬¬¬*¬¬¬¬', txtweight: FontWeight.bold, txtSize: 23),
+          Text('_____*_____'),
           Gyapp(gyap: 30),
           SkillText(
               textname: 'Flutter Developer',
