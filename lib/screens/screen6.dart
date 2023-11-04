@@ -3,7 +3,7 @@ import 'package:portfolio/assets.dart';
 import 'package:portfolio/forSkillText.dart';
 import 'package:portfolio/getInTouchCard.dart';
 import 'package:portfolio/gyap.dart';
-import 'package:portfolio/serviceCard.dart';
+import 'package:portfolio/screens/screen7.dart';
 
 class ScreenSix extends StatelessWidget {
   @override
@@ -33,6 +33,7 @@ class ScreenSix extends StatelessWidget {
           caption: 'Melattur,Malappuram,Kerala',
         ),
         Gyapp(gyap: 30),
+        ScreenSeven()
       ]),
     );
   }

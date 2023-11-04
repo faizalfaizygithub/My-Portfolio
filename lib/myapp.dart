@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/assets.dart';
+import 'package:portfolio/drawerList.dart';
 import 'package:portfolio/screens/homePage.dart';
-import 'package:portfolio/screens/screen1.dart';
-import 'package:portfolio/screens/screen2.dart';
-import 'package:portfolio/screens/screen3.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -34,8 +32,16 @@ class MyApp extends StatelessWidget {
           automaticallyImplyLeading: true,
         ),
         body: HomePage(),
-        endDrawer: const Drawer(
-          width: 300,
+        endDrawer: Center(
+          child: Container(
+            height: 500,
+            width: 350,
+            child: const Drawer(
+              backgroundColor: Colors.blueGrey,
+              shadowColor: Colors.grey,
+              child: DrawerList(),
+            ),
+          ),
         ),
       ),
     );

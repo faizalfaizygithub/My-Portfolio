@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/gyap.dart';
+import 'package:portfolio/screens/lastScreen.dart';
 import 'package:portfolio/screens/screen1.dart';
 import 'package:portfolio/screens/screen2.dart';
 import 'package:portfolio/screens/screen3.dart';
 import 'package:portfolio/screens/screen4.dart';
 import 'package:portfolio/screens/screen5.dart';
 import 'package:portfolio/screens/screen6.dart';
+import 'package:portfolio/screens/screen7.dart';
 
 import '../assets.dart';
 
@@ -38,7 +40,7 @@ class HomePage extends StatelessWidget {
             Gyapp(gyap: 10),
             ScreenFive(),
             Gyapp(gyap: 10),
-            ScreenSix()
+            ScreenSix(),
           ],
         ),
       )
