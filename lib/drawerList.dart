@@ -38,12 +38,17 @@ class ListOfDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(20.0),
-      child: Text(
-        txtname,
-        style: const TextStyle(
-            fontSize: 20, fontFamily: 'my name', fontWeight: FontWeight.bold),
-      ),
-    );
+        padding: const EdgeInsets.all(15.0),
+        child: TextButton(
+          onPressed: () {},
+          child: Text(
+            txtname,
+            style: const TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+                fontFamily: 'my name ',
+                fontWeight: FontWeight.bold),
+          ),
+        ));
   }
 }

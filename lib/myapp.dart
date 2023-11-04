@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 41, 96, 126),
+          backgroundColor: const Color.fromARGB(255, 41, 96, 126),
           leading: Container(
             child: Image.asset(
               flutterkilipic,
@@ -23,22 +23,25 @@ class MyApp extends StatelessWidget {
             'Muhammed Faisal v \n flutter developer ',
             style: TextStyle(
                 fontFamily: 'my name',
-                fontSize: 25,
+                fontSize: 23,
                 fontWeight: FontWeight.bold),
           ),
           toolbarHeight: 100,
           titleTextStyle: const TextStyle(
-              fontSize: 20, color: Color.fromARGB(228, 252, 249, 249)),
+            fontSize: 20,
+            color: Color.fromARGB(227, 221, 208, 208),
+          ),
           automaticallyImplyLeading: true,
         ),
-        body: HomePage(),
+        body: const HomePage(),
         endDrawer: Center(
           child: Container(
             height: 500,
             width: 350,
             child: const Drawer(
-              backgroundColor: Colors.blueGrey,
-              shadowColor: Colors.grey,
+              elevation: 20,
+              backgroundColor: Colors.black,
+              shadowColor: Colors.black,
               child: DrawerList(),
             ),
           ),

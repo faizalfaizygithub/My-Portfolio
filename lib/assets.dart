@@ -8,6 +8,16 @@ String shoppic = 'assets/images/shop.webp';
 String shop2pic = 'assets/images/shop.jpg';
 String shoppingpic = 'assets/images/shopping.jpg';
 //logo
+String home1pic = 'assets/images/home1.jpg';
+String home2pic = 'assets/images/home2.png';
+String home3pic = 'assets/images/home3.jpg';
+
+String home4pic = 'assets/images/home4.jpg';
+String code3pic = 'assets/images/code3.webp';
+String code1pic = 'assets/images/code1.avif';
+String devpic = 'assets/images/dev.jpg';
+String dev2pic = 'assets/images/dev2.jpg';
+//
 String birdpic = 'assets/images/bird.jpg';
 String codepic = 'assets/images/code.jpg';
 String dartbirdpic = 'assets/images/dartbird.jpg';
@@ -45,3 +55,7 @@ String vsCption =
     'Visual Studio Code, also commonly referred to as VS Code,[12] is a source-code editor made by Microsoft with the Electron Framework, for Windows, Linux and macOS.';
 String gitCaptions =
     'Git is a distributed version control system that tracks changes in any set of computer files,';
+//FIRST PAGE
+
+String HomePagetitles =
+    'Im a Mobile appplication & Web developer based in india . I make the visual for website to be more interactive';

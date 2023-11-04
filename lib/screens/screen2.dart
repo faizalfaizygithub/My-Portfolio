@@ -24,7 +24,7 @@ class ScreenTwo extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.7,
           width: MediaQuery.of(context).size.width,
           child: Image.asset(
-            pro1pic,
+            dev2pic,
             fit: BoxFit.cover,
           ),
         ),
