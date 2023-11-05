@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/assets.dart';
 
 class TriangleWidget extends StatelessWidget {
+  const TriangleWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Stack(children: [

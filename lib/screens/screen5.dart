@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/assets.dart';
 import 'package:portfolio/forSkillText.dart';
 import 'package:portfolio/gyap.dart';
-import 'package:portfolio/portfoiloCard.dart';
 
 class ScreenFive extends StatelessWidget {
   @override
@@ -38,6 +37,38 @@ class ScreenFive extends StatelessWidget {
           Gyapp(gyap: 30),
         ],
       ),
+    );
+  }
+}
+
+class PortfolioCard extends StatelessWidget {
+  String photo;
+  void Function() photoAction;
+  PortfolioCard({super.key, required this.photo, required this.photoAction});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 280,
+      width: 350,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: Colors.white,
+          boxShadow: const [
+            BoxShadow(color: Colors.black, offset: Offset(7, 6), blurRadius: 15)
+          ]),
+      child: Column(children: [
+        Container(
+          height: 270,
+          width: 350,
+          child: TextButton(
+            onPressed: photoAction,
+            child: Image.asset(
+              photo,
+            ),
+          ),
+        ),
+      ]),
     );
   }
 }

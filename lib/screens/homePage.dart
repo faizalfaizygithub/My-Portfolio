@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/gyap.dart';
-import 'package:portfolio/screens/lastScreen.dart';
 import 'package:portfolio/screens/screen1.dart';
 import 'package:portfolio/screens/screen2.dart';
 import 'package:portfolio/screens/screen3.dart';

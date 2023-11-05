@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/myData.dart';
 
 class DrawerList extends StatelessWidget {
   const DrawerList({super.key});
