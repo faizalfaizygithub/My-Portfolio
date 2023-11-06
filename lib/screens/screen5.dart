@@ -3,39 +3,56 @@ import 'package:portfolio/assets.dart';
 import 'package:portfolio/forSkillText.dart';
 import 'package:portfolio/gyap.dart';
 
-class ScreenFive extends StatelessWidget {
+class ScreenFive extends StatefulWidget {
+  const ScreenFive({super.key});
+
+  @override
+  State<ScreenFive> createState() => _ScreenFiveState();
+}
+
+class _ScreenFiveState extends State<ScreenFive> {
   @override
   Widget build(BuildContext context) {
     return Card(
       color: Colors.grey.shade100,
-      child: Column(
-        children: [
-          Gyapp(gyap: 220),
-          SkillText(
-              textname: 'Portfolio ', txtweight: FontWeight.bold, txtSize: 35),
-          Text('_____*_____'),
-          Gyapp(gyap: 30),
-          PortfolioCard(
-            photo: shoppingpic,
-            photoAction: () {},
-          ),
-          Gyapp(gyap: 30),
-          PortfolioCard(
-            photo: bloodpic,
-            photoAction: () {},
-          ),
-          Gyapp(gyap: 30),
-          PortfolioCard(
-            photo: tripe2pic,
-            photoAction: () {},
-          ),
-          Gyapp(gyap: 30),
-          PortfolioCard(
-            photo: instapic,
-            photoAction: () {},
-          ),
-          Gyapp(gyap: 30),
-        ],
+      child: Container(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        child: ListView(
+          children: [
+            Column(
+              children: [
+                Gyapp(gyap: 220),
+                SkillText(
+                    textname: 'Portfolio ',
+                    txtweight: FontWeight.bold,
+                    txtSize: 35),
+                Text('_____*_____'),
+                Gyapp(gyap: 30),
+                PortfolioCard(
+                  photo: shoppingpic,
+                  photoAction: () {},
+                ),
+                Gyapp(gyap: 30),
+                PortfolioCard(
+                  photo: bloodpic,
+                  photoAction: () {},
+                ),
+                Gyapp(gyap: 30),
+                PortfolioCard(
+                  photo: tripe2pic,
+                  photoAction: () {},
+                ),
+                Gyapp(gyap: 30),
+                PortfolioCard(
+                  photo: instapic,
+                  photoAction: () {},
+                ),
+                Gyapp(gyap: 30),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

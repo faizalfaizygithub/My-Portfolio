@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/gyap.dart';
+
 import 'package:portfolio/screens/screen1.dart';
 import 'package:portfolio/screens/screen2.dart';
 import 'package:portfolio/screens/screen3.dart';
@@ -9,9 +10,14 @@ import 'package:portfolio/screens/screen6.dart';
 
 import '../assets.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
@@ -28,10 +34,8 @@ class HomePage extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         child: ListView(
           children: [
-            const ScreenOne(),
-            Gyapp(gyap: 140),
+            ScreenOne(),
             ScreenTwo(),
-            Gyapp(gyap: 10),
             const ScreenThree(),
             Gyapp(gyap: 10),
             const ScreenFour(),
@@ -41,7 +45,7 @@ class HomePage extends StatelessWidget {
             ScreenSix(),
           ],
         ),
-      )
+      ),
     ]);
   }
 }

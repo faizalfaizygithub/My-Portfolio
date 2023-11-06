@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/gyap.dart';
 import 'package:portfolio/screens/lastScreen.dart';
 
-class ScreenSeven extends StatelessWidget {
+class ScreenSeven extends StatefulWidget {
   const ScreenSeven({super.key});
 
+  @override
+  State<ScreenSeven> createState() => _ScreenSevenState();
+}
+
+class _ScreenSevenState extends State<ScreenSeven> {
   @override
   Widget build(BuildContext context) {
     return Card(

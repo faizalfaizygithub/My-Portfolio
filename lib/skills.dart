@@ -17,28 +17,28 @@ class _SkillsState extends State<Skills> {
             textname: ' * UI & Web developer ',
             txtweight: FontWeight.normal,
             txtSize: 20),
-        SliderDa(),
+        const SliderDa(),
         SkillText(
             textname: '* FrontEnd developer',
             txtweight: FontWeight.normal,
             txtSize: 20),
-        SliderDa(),
+        const SliderDa(),
         SkillText(
             textname: '* Android & ios developer',
             txtweight: FontWeight.normal,
             txtSize: 20),
-        SliderDa(),
+        const SliderDa(),
         SkillText(
             textname: '*Firebase', txtweight: FontWeight.normal, txtSize: 20),
-        SliderDa(),
+        const SliderDa(),
         SkillText(
             textname: '* Git & GitHUb ',
             txtweight: FontWeight.normal,
             txtSize: 20),
-        SliderDa(),
+        const SliderDa(),
         SkillText(
             textname: '* Dart', txtweight: FontWeight.normal, txtSize: 20),
-        SliderDa(),
+        const SliderDa(),
       ],
     );
   }
@@ -57,7 +57,8 @@ class _SliderDaState extends State<SliderDa> {
   Widget build(BuildContext context) {
     return Slider(
         thumbColor: Colors.white,
-        activeColor: Color.fromARGB(255, 20, 13, 13),
+        autofocus: false,
+        activeColor: const Color.fromARGB(255, 20, 13, 13),
         value: _currentSliderValue,
         min: 0,
         max: 600,

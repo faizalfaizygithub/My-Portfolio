@@ -3,56 +3,70 @@ import 'package:portfolio/assets.dart';
 import 'package:portfolio/forSkillText.dart';
 import 'package:portfolio/gyap.dart';
 
-class ScreenFour extends StatelessWidget {
+class ScreenFour extends StatefulWidget {
   const ScreenFour({super.key});
 
   @override
+  State<ScreenFour> createState() => _ScreenFourState();
+}
+
+class _ScreenFourState extends State<ScreenFour> {
+  @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.grey.shade100,
-      child: Column(children: [
-        Gyapp(gyap: 200),
-        SkillText(
-            textname: 'Services ', txtweight: FontWeight.bold, txtSize: 35),
-        Text('_____*_____'),
-        Gyapp(gyap: 70),
-        ServiceCard(
-          logo: flutterlogopic,
-          caption: fluttercaption,
-          headname: 'Flutter',
+      child: Container(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        child: ListView(
+          children: [
+            Column(children: [
+              Gyapp(gyap: 20),
+              SkillText(
+                  textname: 'Services ',
+                  txtweight: FontWeight.bold,
+                  txtSize: 35),
+              Text('_____*_____'),
+              Gyapp(gyap: 20),
+              ServiceCard(
+                logo: flutterlogopic,
+                caption: fluttercaption,
+                headname: 'Flutter',
+              ),
+              Gyapp(gyap: 30),
+              ServiceCard(
+                headname: 'Dart',
+                logo: dartlogopic,
+                caption: dartcaption,
+              ),
+              Gyapp(gyap: 30),
+              ServiceCard(
+                logo: githublogopic,
+                headname: 'GitHUb',
+                caption: githubCaptions,
+              ),
+              Gyapp(gyap: 30),
+              ServiceCard(
+                logo: gitlogopic,
+                headname: 'Git',
+                caption: gitCaptions,
+              ),
+              Gyapp(gyap: 30),
+              ServiceCard(
+                logo: firebaselogopic,
+                headname: 'Firebase',
+                caption: firebasecaptions,
+              ),
+              Gyapp(gyap: 30),
+              ServiceCard(
+                logo: vslogopic,
+                headname: 'Vs Code',
+                caption: vsCption,
+              ),
+              Gyapp(gyap: 30),
+            ]),
+          ],
         ),
-        Gyapp(gyap: 30),
-        ServiceCard(
-          headname: 'Dart',
-          logo: dartlogopic,
-          caption: dartcaption,
-        ),
-        Gyapp(gyap: 30),
-        ServiceCard(
-          logo: githublogopic,
-          headname: 'GitHUb',
-          caption: githubCaptions,
-        ),
-        Gyapp(gyap: 30),
-        ServiceCard(
-          logo: gitlogopic,
-          headname: 'Git',
-          caption: gitCaptions,
-        ),
-        Gyapp(gyap: 30),
-        ServiceCard(
-          logo: firebaselogopic,
-          headname: 'Firebase',
-          caption: firebasecaptions,
-        ),
-        Gyapp(gyap: 30),
-        ServiceCard(
-          logo: vslogopic,
-          headname: 'Vs Code',
-          caption: vsCption,
-        ),
-        Gyapp(gyap: 30),
-      ]),
+      ),
     );
   }
 }
