@@ -10,7 +10,7 @@ class DrawerList extends StatelessWidget {
         ListOfDrawer(
           txtname: 'Home',
           txtAction: () {
-            Navigator.of(context).pop();
+            Navigator.of(context).pushNamed('/HomePage');
           },
         ),
         ListOfDrawer(

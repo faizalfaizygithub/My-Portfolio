@@ -4,6 +4,7 @@ class SkillText extends StatelessWidget {
   String textname;
   dynamic txtweight;
   dynamic txtSize;
+
   SkillText({
     required this.textname,
     required this.txtweight,
@@ -13,7 +14,10 @@ class SkillText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       textname,
-      style: TextStyle(fontSize: txtSize.toDouble(), fontWeight: txtweight),
+      style: TextStyle(
+          fontSize: txtSize.toDouble(),
+          fontWeight: txtweight,
+          color: Colors.black),
     );
   }
 }

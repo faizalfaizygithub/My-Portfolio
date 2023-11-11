@@ -14,59 +14,52 @@ class _ScreenFourState extends State<ScreenFour> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        child: ListView(
-          children: [
-            Column(children: [
-              Gyapp(gyap: 20),
-              SkillText(
-                  textname: 'Services ',
-                  txtweight: FontWeight.bold,
-                  txtSize: 35),
-              Text('_____*_____'),
-              Gyapp(gyap: 20),
-              ServiceCard(
-                logo: flutterlogopic,
-                caption: fluttercaption,
-                headname: 'Flutter',
-              ),
-              Gyapp(gyap: 30),
-              ServiceCard(
-                headname: 'Dart',
-                logo: dartlogopic,
-                caption: dartcaption,
-              ),
-              Gyapp(gyap: 30),
-              ServiceCard(
-                logo: githublogopic,
-                headname: 'GitHUb',
-                caption: githubCaptions,
-              ),
-              Gyapp(gyap: 30),
-              ServiceCard(
-                logo: gitlogopic,
-                headname: 'Git',
-                caption: gitCaptions,
-              ),
-              Gyapp(gyap: 30),
-              ServiceCard(
-                logo: firebaselogopic,
-                headname: 'Firebase',
-                caption: firebasecaptions,
-              ),
-              Gyapp(gyap: 30),
-              ServiceCard(
-                logo: vslogopic,
-                headname: 'Vs Code',
-                caption: vsCption,
-              ),
-              Gyapp(gyap: 30),
-            ]),
-          ],
+      child: Column(children: [
+        Gyapp(gyap: 200),
+        SkillText(
+          textname: 'Services ',
+          txtweight: FontWeight.bold,
+          txtSize: 35,
         ),
-      ),
+        Text('_____*_____'),
+        Gyapp(gyap: 20),
+        ServiceCard(
+          logo: flutterlogopic,
+          caption: fluttercaption,
+          headname: 'Flutter',
+        ),
+        Gyapp(gyap: 30),
+        ServiceCard(
+          headname: 'Dart',
+          logo: dartlogopic,
+          caption: dartcaption,
+        ),
+        Gyapp(gyap: 30),
+        ServiceCard(
+          logo: githublogopic,
+          headname: 'GitHUb',
+          caption: githubCaptions,
+        ),
+        Gyapp(gyap: 30),
+        ServiceCard(
+          logo: gitlogopic,
+          headname: 'Git',
+          caption: gitCaptions,
+        ),
+        Gyapp(gyap: 30),
+        ServiceCard(
+          logo: firebaselogopic,
+          headname: 'Firebase',
+          caption: firebasecaptions,
+        ),
+        Gyapp(gyap: 30),
+        ServiceCard(
+          logo: vslogopic,
+          headname: 'Vs Code',
+          caption: vsCption,
+        ),
+        Gyapp(gyap: 30),
+      ]),
     );
   }
 }
@@ -105,10 +98,16 @@ class ServiceCard extends StatelessWidget {
             ),
             Gyapp(gyap: 20),
             SkillText(
-                textname: headname, txtweight: FontWeight.bold, txtSize: 20),
+              textname: headname,
+              txtweight: FontWeight.bold,
+              txtSize: 20,
+            ),
             Gyapp(gyap: 10),
             SkillText(
-                textname: caption, txtweight: FontWeight.normal, txtSize: 17),
+              textname: caption,
+              txtweight: FontWeight.normal,
+              txtSize: 17,
+            ),
           ],
         ),
       ),

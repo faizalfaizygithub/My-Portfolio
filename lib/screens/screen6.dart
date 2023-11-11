@@ -14,42 +14,32 @@ class _ScreenSixState extends State<ScreenSix> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        child: ListView(
-          children: [
-            Column(children: [
-              Gyapp(gyap: 200),
-              SkillText(
-                  textname: 'Get In Touch ',
-                  txtweight: FontWeight.bold,
-                  txtSize: 35),
-              Text('_____*_____'),
-              Gyapp(gyap: 50),
-              GetinTouchCard(
-                icon: Icons.phone_android,
-                caption: '+91 9847959648',
-                headname: 'Phone',
-              ),
-              Gyapp(gyap: 30),
-              GetinTouchCard(
-                headname: 'Email',
-                icon: Icons.email,
-                caption: 'faizalfaizy648@gmail.com',
-              ),
-              Gyapp(gyap: 30),
-              GetinTouchCard(
-                icon: Icons.location_on,
-                headname: 'Place',
-                caption: 'Melattur,Malappuram,Kerala',
-              ),
-              Gyapp(gyap: 30),
-              ScreenSeven()
-            ]),
-          ],
+      child: Column(children: [
+        Gyapp(gyap: 200),
+        SkillText(
+            textname: 'Get In Touch ', txtweight: FontWeight.bold, txtSize: 35),
+        Text('_____*_____'),
+        Gyapp(gyap: 50),
+        GetinTouchCard(
+          icon: Icons.phone_android,
+          caption: '+91 9847959648',
+          headname: 'Phone',
         ),
-      ),
+        Gyapp(gyap: 30),
+        GetinTouchCard(
+          headname: 'Email',
+          icon: Icons.email,
+          caption: 'faizalfaizy648@gmail.com',
+        ),
+        Gyapp(gyap: 30),
+        GetinTouchCard(
+          icon: Icons.location_on,
+          headname: 'Place',
+          caption: 'Melattur,Malappuram,Kerala',
+        ),
+        Gyapp(gyap: 30),
+        ScreenSeven()
+      ]),
     );
   }
 }

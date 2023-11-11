@@ -15,44 +15,34 @@ class _ScreenFiveState extends State<ScreenFive> {
   Widget build(BuildContext context) {
     return Card(
       color: Colors.grey.shade100,
-      child: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        child: ListView(
-          children: [
-            Column(
-              children: [
-                Gyapp(gyap: 220),
-                SkillText(
-                    textname: 'Portfolio ',
-                    txtweight: FontWeight.bold,
-                    txtSize: 35),
-                Text('_____*_____'),
-                Gyapp(gyap: 30),
-                PortfolioCard(
-                  photo: shoppingpic,
-                  photoAction: () {},
-                ),
-                Gyapp(gyap: 30),
-                PortfolioCard(
-                  photo: bloodpic,
-                  photoAction: () {},
-                ),
-                Gyapp(gyap: 30),
-                PortfolioCard(
-                  photo: tripe2pic,
-                  photoAction: () {},
-                ),
-                Gyapp(gyap: 30),
-                PortfolioCard(
-                  photo: instapic,
-                  photoAction: () {},
-                ),
-                Gyapp(gyap: 30),
-              ],
-            ),
-          ],
-        ),
+      child: Column(
+        children: [
+          Gyapp(gyap: 220),
+          SkillText(
+              textname: 'Portfolio ', txtweight: FontWeight.bold, txtSize: 35),
+          Text('_____*_____'),
+          Gyapp(gyap: 30),
+          PortfolioCard(
+            photo: shoppingpic,
+            photoAction: () {},
+          ),
+          Gyapp(gyap: 30),
+          PortfolioCard(
+            photo: bloodpic,
+            photoAction: () {},
+          ),
+          Gyapp(gyap: 30),
+          PortfolioCard(
+            photo: tripe2pic,
+            photoAction: () {},
+          ),
+          Gyapp(gyap: 30),
+          PortfolioCard(
+            photo: instapic,
+            photoAction: () {},
+          ),
+          Gyapp(gyap: 30),
+        ],
       ),
     );
   }
