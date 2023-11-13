@@ -14,52 +14,54 @@ class _ScreenFourState extends State<ScreenFour> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: Column(children: [
-        Gyapp(gyap: 200),
-        SkillText(
-          textname: 'Services ',
-          txtweight: FontWeight.bold,
-          txtSize: 35,
-        ),
-        Text('_____*_____'),
-        Gyapp(gyap: 20),
-        ServiceCard(
-          logo: flutterlogopic,
-          caption: fluttercaption,
-          headname: 'Flutter',
-        ),
-        Gyapp(gyap: 30),
-        ServiceCard(
-          headname: 'Dart',
-          logo: dartlogopic,
-          caption: dartcaption,
-        ),
-        Gyapp(gyap: 30),
-        ServiceCard(
-          logo: githublogopic,
-          headname: 'GitHUb',
-          caption: githubCaptions,
-        ),
-        Gyapp(gyap: 30),
-        ServiceCard(
-          logo: gitlogopic,
-          headname: 'Git',
-          caption: gitCaptions,
-        ),
-        Gyapp(gyap: 30),
-        ServiceCard(
-          logo: firebaselogopic,
-          headname: 'Firebase',
-          caption: firebasecaptions,
-        ),
-        Gyapp(gyap: 30),
-        ServiceCard(
-          logo: vslogopic,
-          headname: 'Vs Code',
-          caption: vsCption,
-        ),
-        Gyapp(gyap: 30),
-      ]),
+      child: SingleChildScrollView(
+        child: Column(children: [
+          Gyapp(gyap: 200),
+          SkillText(
+            textname: 'Services ',
+            txtweight: FontWeight.bold,
+            txtSize: 35,
+          ),
+          Text('_____*_____'),
+          Gyapp(gyap: 20),
+          ServiceCard(
+            logo: flutterlogopic,
+            caption: fluttercaption,
+            headname: 'Flutter',
+          ),
+          Gyapp(gyap: 30),
+          ServiceCard(
+            headname: 'Dart',
+            logo: dartlogopic,
+            caption: dartcaption,
+          ),
+          Gyapp(gyap: 30),
+          ServiceCard(
+            logo: githublogopic,
+            headname: 'GitHUb',
+            caption: githubCaptions,
+          ),
+          Gyapp(gyap: 30),
+          ServiceCard(
+            logo: gitlogopic,
+            headname: 'Git',
+            caption: gitCaptions,
+          ),
+          Gyapp(gyap: 30),
+          ServiceCard(
+            logo: firebaselogopic,
+            headname: 'Firebase',
+            caption: firebasecaptions,
+          ),
+          Gyapp(gyap: 30),
+          ServiceCard(
+            logo: vslogopic,
+            headname: 'Vs Code',
+            caption: vsCption,
+          ),
+          Gyapp(gyap: 30),
+        ]),
+      ),
     );
   }
 }

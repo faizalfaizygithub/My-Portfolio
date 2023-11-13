@@ -17,25 +17,27 @@ class _ScreenThreeState extends State<ScreenThree> {
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Column(children: [
-          Gyapp(gyap: 190),
-          SkillText(
-              textname: 'Skills', txtweight: FontWeight.bold, txtSize: 30),
-          const Text('_____*_____'),
-          Gyapp(gyap: 30),
-          SkillText(
-              textname: 'Flutter Developer',
-              txtweight: FontWeight.w700,
-              txtSize: 22),
-          Gyapp(gyap: 15),
-          SkillText(
-            textname: skilltitles,
-            txtweight: FontWeight.normal,
-            txtSize: 18,
-          ),
-          Gyapp(gyap: 20),
-          const Skills()
-        ]),
+        child: SingleChildScrollView(
+          child: Column(children: [
+            Gyapp(gyap: 190),
+            SkillText(
+                textname: 'Skills', txtweight: FontWeight.bold, txtSize: 30),
+            const Text('_____*_____'),
+            Gyapp(gyap: 30),
+            SkillText(
+                textname: 'Flutter Developer',
+                txtweight: FontWeight.w700,
+                txtSize: 22),
+            Gyapp(gyap: 15),
+            SkillText(
+              textname: skilltitles,
+              txtweight: FontWeight.normal,
+              txtSize: 18,
+            ),
+            Gyapp(gyap: 20),
+            const Skills()
+          ]),
+        ),
       ),
     );
   }

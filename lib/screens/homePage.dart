@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/assets.dart';
+import 'package:portfolio/drawerList.dart';
 
 import 'package:portfolio/screens/screen1.dart';
 import 'package:portfolio/screens/screen2.dart';
@@ -27,7 +28,6 @@ class _HomePageState extends State<HomePage> {
             fit: BoxFit.cover,
           ),
         ),
-        actions: [Icon(Icons.menu)],
         leadingWidth: 90,
         title: const Text(
           'Muhammed Faisal v \n flutter developer ',
@@ -66,6 +66,14 @@ class _HomePageState extends State<HomePage> {
               Navigator.of(context).pushNamed('/HomePage');
             },
           ),
+        ),
+      ),
+      endDrawer: Container(
+        alignment: Alignment.topCenter,
+        height: 500,
+        width: 350,
+        child: const Drawer(
+          child: DrawerList(),
         ),
       ),
     );
