@@ -2,13 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Buttons extends StatefulWidget {
-  Buttons({super.key});
-
   @override
   State<Buttons> createState() => _ButtonsState();
 }
 
 class _ButtonsState extends State<Buttons> {
+  Future<void> _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,9 +25,8 @@ class _ButtonsState extends State<Buttons> {
             backgroundColor: MaterialStatePropertyAll(Colors.blueGrey),
           ),
           onPressed: () {
-            launchUrl(
-                'https://media.licdn.com/dms/document/media/D561FAQE2ykPTaIksdA/feedshare-document-pdf-analyzed/0/1699805032908?e=1700697600&v=beta&t=JJqx5NKSenM6rSBq0jM0oreY_9_tADeSe-ueJPGemcA'
-                    as Uri);
+            _launchURL(
+                'https://drive.google.com/file/d/15fb8guylWaFatfDM98RpQ-BQKThE7kTH/view?usp=sharing');
           },
           child: const Text(
             'Download CV',
@@ -46,3 +51,5 @@ class _ButtonsState extends State<Buttons> {
     );
   }
 }
+
+class _url {}
