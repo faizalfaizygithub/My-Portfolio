@@ -51,5 +51,3 @@ class _ButtonsState extends State<Buttons> {
     );
   }
 }
-
-class _url {}

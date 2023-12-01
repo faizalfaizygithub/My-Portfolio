@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/assets.dart';
 import 'package:portfolio/forSkillText.dart';
 import 'package:portfolio/gyap.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ScreenFive extends StatefulWidget {
   const ScreenFive({super.key});
@@ -11,6 +12,14 @@ class ScreenFive extends StatefulWidget {
 }
 
 class _ScreenFiveState extends State<ScreenFive> {
+  Future<void> _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -27,7 +36,9 @@ class _ScreenFiveState extends State<ScreenFive> {
             Gyapp(gyap: 30),
             PortfolioCard(
               photo: shoppingpic,
-              photoAction: () {},
+              photoAction: () {
+                _launchURL('https://vkstore07.web.app');
+              },
             ),
             Gyapp(gyap: 30),
             PortfolioCard(
@@ -37,12 +48,16 @@ class _ScreenFiveState extends State<ScreenFive> {
             Gyapp(gyap: 30),
             PortfolioCard(
               photo: tripe2pic,
-              photoAction: () {},
+              photoAction: () {
+                _launchURL('https://keralatourismapp10.web.app');
+              },
             ),
             Gyapp(gyap: 30),
             PortfolioCard(
               photo: instapic,
-              photoAction: () {},
+              photoAction: () {
+                _launchURL('https://fir-portfoilo.web.app');
+              },
             ),
             Gyapp(gyap: 30),
           ],

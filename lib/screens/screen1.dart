@@ -1,7 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/assets.dart';
-import 'package:portfolio/drawerList.dart';
 import 'package:portfolio/gyap.dart';
 
 class ScreenOne extends StatefulWidget {
