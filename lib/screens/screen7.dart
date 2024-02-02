@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/gyap.dart';
+import 'package:portfolio/components/MyText.dart';
+import 'package:portfolio/components/button.dart';
 import 'package:portfolio/screens/lastScreen.dart';
 
 class ScreenSeven extends StatefulWidget {
@@ -14,27 +15,22 @@ class _ScreenSevenState extends State<ScreenSeven> {
   Widget build(BuildContext context) {
     return Card(
         child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Gyapp(gyap: 30),
-        TextFildCard(textName: 'Name', count: 2),
-        TextFildCard(textName: 'Email', count: 2),
-        TextFildCard(textName: 'Message', count: 8),
+        gyap(30, 0),
+        TextFildCard(textName: 'Name', count: 1),
+        TextFildCard(textName: 'Email', count: 1),
+        TextFildCard(textName: 'Message', count: 5),
+        gyap(30, 0),
         Padding(
-          padding: const EdgeInsets.all(3.0),
-          child: ListTile(
-            leading: ElevatedButton(
-              style: const ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(
-                      Color.fromARGB(255, 196, 154, 19))),
-              onPressed: () {},
-              child: const Text(
-                'Submit',
-                style: TextStyle(fontSize: 20, color: Colors.white),
-              ),
-            ),
+          padding: const EdgeInsets.all(8.0),
+          child: Buttons(
+            text: 'Submit',
+            action: () {},
+            color: Color.fromARGB(255, 177, 160, 8),
           ),
         ),
-        Gyapp(gyap: 100),
+        gyap(100, 0),
         TriangleWidget()
       ],
     ));
@@ -53,8 +49,10 @@ class TextFildCard extends StatelessWidget {
       child: TextField(
         keyboardType: TextInputType.text,
         decoration: InputDecoration(
+          filled: true,
+          fillColor: Colors.white,
           label: Text(textName),
-          labelStyle: const TextStyle(color: Colors.grey),
+          labelStyle: blacksmallTexts,
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
               color: Colors.grey.shade100,

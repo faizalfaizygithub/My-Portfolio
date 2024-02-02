@@ -1,7 +1,5 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/forSkillText.dart';
-import 'package:portfolio/gyap.dart';
+import 'package:portfolio/components/MyText.dart';
 import 'package:portfolio/screens/screen7.dart';
 
 class ScreenSix extends StatefulWidget {
@@ -17,31 +15,31 @@ class _ScreenSixState extends State<ScreenSix> {
     return Card(
       child: SingleChildScrollView(
         child: Column(children: [
-          Gyapp(gyap: 200),
-          SkillText(
-              textname: 'Get In Touch ',
-              txtweight: FontWeight.bold,
-              txtSize: 35),
+          gyap(200, 0),
+          Text(
+            'Get In Touch',
+            style: BlckHeadStyle,
+          ),
           Text('_____*_____'),
-          Gyapp(gyap: 50),
+          gyap(50, 0),
           GetinTouchCard(
             icon: Icons.phone_android,
             caption: '+91 9847959648',
             headname: 'Phone',
           ),
-          Gyapp(gyap: 30),
+          gyap(30, 0),
           GetinTouchCard(
             headname: 'Email',
             icon: Icons.email,
             caption: 'faizalfaizy648@gmail.com',
           ),
-          Gyapp(gyap: 30),
+          gyap(30, 0),
           GetinTouchCard(
             icon: Icons.location_on,
             headname: 'Place',
             caption: 'Melattur,Malappuram,Kerala',
           ),
-          Gyapp(gyap: 30),
+          gyap(30, 0),
           ScreenSeven()
         ]),
       ),
@@ -68,12 +66,16 @@ class GetinTouchCard extends StatelessWidget {
         child: Column(
           children: [
             IconButton(onPressed: () {}, icon: Icon(icon)),
-            Gyapp(gyap: 20),
-            SkillText(
-                textname: headname, txtweight: FontWeight.bold, txtSize: 20),
-            Gyapp(gyap: 10),
-            SkillText(
-                textname: caption, txtweight: FontWeight.normal, txtSize: 17),
+            gyap(30, 0),
+            Text(
+              headname,
+              style: blacksubHeadStyle,
+            ),
+            gyap(10, 0),
+            Text(
+              caption,
+              style: blacksmallTexts,
+            ),
           ],
         ),
       ),

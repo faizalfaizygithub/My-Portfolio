@@ -1,35 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/assets.dart';
+import 'package:portfolio/components/assets.dart';
 
 class TriangleWidget extends StatelessWidget {
   const TriangleWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [
-      CustomPaint(
-        size: const Size(500, 100), // Set the size of the triangle
-        painter: TrianglePainter(),
-      ),
-      Positioned(
-        top: 10,
-        left: 120,
-        child: Image.asset(
-          flutterkilipic,
-          alignment: Alignment.topCenter,
-          width: 120,
-          height: 120,
-        ),
-      ),
-      const Positioned(
-        bottom: 10,
-        left: 100,
-        child: Text(
-          '@Faizal.All Rights Reserved',
-          style: TextStyle(color: Colors.white),
-        ),
-      ),
-    ]);
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Stack(alignment: AlignmentDirectional.bottomCenter, children: [
+          Align(
+            alignment: Alignment.center,
+            child: CustomPaint(
+              size: const Size(500, 100), // Set the size of the triangle
+              painter: TrianglePainter(),
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Image.asset(
+              flutterkilipic,
+              alignment: Alignment.topCenter,
+              width: 120,
+              height: 120,
+            ),
+          ),
+          const Align(
+            alignment: Alignment.topCenter,
+            child: Text(
+              '@Faizal.All Rights Reserved',
+              style: TextStyle(color: Colors.white, fontSize: 8),
+            ),
+          ),
+        ]),
+      ],
+    );
   }
 }
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/assets.dart';
-import 'package:portfolio/drawerList.dart';
-
+import 'package:portfolio/components/MyText.dart';
+import 'package:portfolio/components/assets.dart';
+import 'package:portfolio/components/drawerList.dart';
 import 'package:portfolio/screens/screen1.dart';
 import 'package:portfolio/screens/screen2.dart';
 import 'package:portfolio/screens/screen3.dart';
@@ -29,16 +29,8 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         leadingWidth: 90,
-        title: const Text(
-          'Muhammed Faisal v \n flutter developer ',
-          style: TextStyle(
-              fontFamily: 'my name', fontSize: 23, fontWeight: FontWeight.bold),
-        ),
+        title: Text('Muhammed Faizal v \n flutter developer ', style: NameHed),
         toolbarHeight: 100,
-        titleTextStyle: const TextStyle(
-          fontSize: 20,
-          color: Color.fromARGB(227, 221, 208, 208),
-        ),
       ),
       body: ListView(
         children: const [
@@ -69,10 +61,11 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       endDrawer: Container(
-        alignment: Alignment.topCenter,
-        height: 500,
+        alignment: Alignment.center,
+        height: 410,
         width: 350,
         child: const Drawer(
+          backgroundColor: Colors.white70,
           child: DrawerList(),
         ),
       ),

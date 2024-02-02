@@ -1,7 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/assets.dart';
-import 'package:portfolio/gyap.dart';
+import 'package:portfolio/components/MyText.dart';
+import 'package:portfolio/components/assets.dart';
 
 class ScreenOne extends StatefulWidget {
   const ScreenOne({super.key});
@@ -29,39 +29,16 @@ class _ScreenOneState extends State<ScreenOne> {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                Gyapp(gyap: 30),
-                const Text(
-                  'Hello',
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontWeight: FontWeight.bold,
-                    fontStyle: FontStyle.normal,
-                    fontSize: 35,
-                  ),
-                ),
-                Gyapp(gyap: 20),
+                gyap(30, 0),
+                Text('Hello', style: WhiteHeadStyle),
+                gyap(20, 0),
                 AnimatedTextKit(repeatForever: true, animatedTexts: [
-                  TyperAnimatedText(
-                    'I Am Developer',
-                    textStyle: const TextStyle(
-                        fontSize: 30,
-                        fontFamily: 'my name',
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  ),
-                  TyperAnimatedText('I Am Creative',
-                      textStyle: const TextStyle(
-                          fontSize: 30,
-                          fontFamily: 'my name',
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white)),
+                  TyperAnimatedText('I Am Developer', textStyle: subHeadStyle),
+                  TyperAnimatedText('I Am Creative', textStyle: subHeadStyle)
                 ]),
-                Gyapp(gyap: 30),
-                Text(
-                  HomePagetitles,
-                  style: TextStyle(fontSize: 22, color: Colors.white),
-                ),
-                Gyapp(gyap: 240),
+                gyap(30, 0),
+                Text(HomePagetitles, style: smallTexts),
+                gyap(240, 0),
               ],
             ),
           ),

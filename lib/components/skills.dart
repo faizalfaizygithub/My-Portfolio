@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/forSkillText.dart';
+import 'package:portfolio/components/MyText.dart';
 
 class Skills extends StatefulWidget {
   const Skills({super.key});
@@ -12,32 +12,37 @@ class _SkillsState extends State<Skills> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SkillText(
-            textname: ' * UI & Web developer ',
-            txtweight: FontWeight.normal,
-            txtSize: 20),
+        Text(
+          '* Android & ios developer',
+          style: blacksubHeadStyle,
+        ),
         const SliderDa(),
-        SkillText(
-            textname: '* FrontEnd developer',
-            txtweight: FontWeight.normal,
-            txtSize: 20),
+        Text(
+          '* FrontEnd & BackEnd ',
+          style: blacksubHeadStyle,
+        ),
         const SliderDa(),
-        SkillText(
-            textname: '* Android & ios developer',
-            txtweight: FontWeight.normal,
-            txtSize: 20),
+        Text(
+          '* Dart ',
+          style: blacksubHeadStyle,
+        ),
         const SliderDa(),
-        SkillText(
-            textname: '*Firebase', txtweight: FontWeight.normal, txtSize: 20),
+        Text(
+          '* Git & GitHub',
+          style: blacksubHeadStyle,
+        ),
         const SliderDa(),
-        SkillText(
-            textname: '* Git & GitHUb ',
-            txtweight: FontWeight.normal,
-            txtSize: 20),
+        Text(
+          '* Firbase',
+          style: blacksubHeadStyle,
+        ),
         const SliderDa(),
-        SkillText(
-            textname: '* Dart', txtweight: FontWeight.normal, txtSize: 20),
+        Text(
+          '* ThirdParty Libraries',
+          style: blacksubHeadStyle,
+        ),
         const SliderDa(),
       ],
     );

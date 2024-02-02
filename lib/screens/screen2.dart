@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/assets.dart';
-import 'package:portfolio/button.dart';
-import 'package:portfolio/gyap.dart';
+import 'package:portfolio/components/MyText.dart';
+import 'package:portfolio/components/assets.dart';
+import 'package:portfolio/components/button.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ScreenTwo extends StatefulWidget {
   const ScreenTwo({super.key});
@@ -11,22 +12,24 @@ class ScreenTwo extends StatefulWidget {
 }
 
 class _ScreenTwoState extends State<ScreenTwo> {
+  Future<void> _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Card(
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Gyapp(gyap: 150),
-            const Text(
-              'About Me',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30),
-            ),
+            gyap(150, 0),
+            Text('About Me', style: BlckHeadStyle),
             const Text('_____*_____'),
-            Gyapp(gyap: 30),
+            gyap(30, 0),
             Container(
               height: MediaQuery.of(context).size.height * 0.7,
               width: MediaQuery.of(context).size.width,
@@ -35,18 +38,11 @@ class _ScreenTwoState extends State<ScreenTwo> {
                 fit: BoxFit.cover,
               ),
             ),
-            Gyapp(gyap: 30),
-            const Text(
-              'Hello..',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-            ),
+            gyap(30, 0),
+            Text('Hello..', style: BlckHeadStyle),
             Padding(
               padding: const EdgeInsets.all(15.0),
-              child: Text(
-                abouttitle,
-                style:
-                    const TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
-              ),
+              child: Text(abouttitle, style: blacksmallTexts),
             ),
             const Divider(
               thickness: 1,
@@ -59,7 +55,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
             ),
             MyData(
               textName: 'Email :',
-              textName2: 'faizalfaizy@gmail.com',
+              textName2: 'faizalfaizy648@gmail.com',
               fontWeight: FontWeight.bold,
             ),
             MyData(
@@ -72,9 +68,26 @@ class _ScreenTwoState extends State<ScreenTwo> {
               textName2: 'mywork.co.in/faizal',
               fontWeight: FontWeight.bold,
             ),
-            Gyapp(gyap: 20),
-            Buttons(),
-            Gyapp(gyap: 40)
+            gyap(20, 0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Buttons(
+                    color: Colors.blueGrey,
+                    text: 'Download Cv',
+                    action: () {
+                      _launchURL(
+                          'https://drive.google.com/file/d/15fb8guylWaFatfDM98RpQ-BQKThE7kTH/view?usp=sharing');
+                    }),
+                Buttons(
+                    color: Color.fromARGB(255, 177, 160, 8),
+                    text: 'Contact Me',
+                    action: () {
+                      Navigator.pushNamed(context, '/ContactPage');
+                    })
+              ],
+            ),
+            gyap(40, 0),
           ],
         ),
       ),
@@ -93,27 +106,21 @@ class MyData extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
-        child: Row(
-          children: [
-            Text(
-              textName,
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: fontWeight,
-              ),
-            ),
-            const SizedBox(
-              width: 20,
-            ),
-            Text(
-              textName2,
-              style: const TextStyle(fontSize: 20),
-            )
-          ],
-        ),
+    return SingleChildScrollView(
+      padding: EdgeInsets.all(10),
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          Text(
+            textName,
+            style: blacksmallTexts,
+            textAlign: TextAlign.start,
+          ),
+          const SizedBox(
+            width: 20,
+          ),
+          Text(textName2, style: blacksmallTexts)
+        ],
       ),
     );
   }

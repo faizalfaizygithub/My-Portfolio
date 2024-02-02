@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/assets.dart';
-import 'package:portfolio/forSkillText.dart';
-import 'package:portfolio/gyap.dart';
+import 'package:portfolio/components/MyText.dart';
+import 'package:portfolio/components/assets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ScreenFive extends StatefulWidget {
@@ -27,39 +26,41 @@ class _ScreenFiveState extends State<ScreenFive> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Gyapp(gyap: 220),
-            SkillText(
-                textname: 'Portfolio ',
-                txtweight: FontWeight.bold,
-                txtSize: 35),
+            gyap(230, 0),
+            Text(
+              'PortFolio',
+              style: BlckHeadStyle,
+            ),
             Text('_____*_____'),
-            Gyapp(gyap: 30),
+            gyap(30, 0),
             PortfolioCard(
               photo: shoppingpic,
               photoAction: () {
                 _launchURL('https://vkstore07.web.app');
               },
             ),
-            Gyapp(gyap: 30),
+            gyap(30, 0),
             PortfolioCard(
               photo: bloodpic,
-              photoAction: () {},
+              photoAction: () {
+                _launchURL('https://blooddonationapp-a24fe.web.app');
+              },
             ),
-            Gyapp(gyap: 30),
+            gyap(30, 0),
             PortfolioCard(
               photo: tripe2pic,
               photoAction: () {
                 _launchURL('https://keralatourismapp10.web.app');
               },
             ),
-            Gyapp(gyap: 30),
+            gyap(30, 0),
             PortfolioCard(
               photo: instapic,
               photoAction: () {
                 _launchURL('https://fir-portfoilo.web.app');
               },
             ),
-            Gyapp(gyap: 30),
+            gyap(30, 0),
           ],
         ),
       ),
@@ -84,7 +85,7 @@ class PortfolioCard extends StatelessWidget {
             BoxShadow(color: Colors.black, offset: Offset(7, 6), blurRadius: 15)
           ]),
       child: Column(children: [
-        Container(
+        SizedBox(
           height: 270,
           width: 350,
           child: TextButton(

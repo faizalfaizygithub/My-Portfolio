@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/assets.dart';
-import 'package:portfolio/forSkillText.dart';
-import 'package:portfolio/gyap.dart';
+import 'package:portfolio/components/MyText.dart';
+import 'package:portfolio/components/assets.dart';
 
 class ScreenFour extends StatefulWidget {
   const ScreenFour({super.key});
@@ -16,50 +15,49 @@ class _ScreenFourState extends State<ScreenFour> {
     return Card(
       child: SingleChildScrollView(
         child: Column(children: [
-          Gyapp(gyap: 200),
-          SkillText(
-            textname: 'Services ',
-            txtweight: FontWeight.bold,
-            txtSize: 35,
+          gyap(200, 0),
+          Text(
+            'Services',
+            style: BlckHeadStyle,
           ),
           Text('_____*_____'),
-          Gyapp(gyap: 20),
+          gyap(30, 0),
           ServiceCard(
             logo: flutterlogopic,
             caption: fluttercaption,
             headname: 'Flutter',
           ),
-          Gyapp(gyap: 30),
+          gyap(30, 0),
           ServiceCard(
             headname: 'Dart',
             logo: dartlogopic,
             caption: dartcaption,
           ),
-          Gyapp(gyap: 30),
+          gyap(30, 0),
           ServiceCard(
             logo: githublogopic,
             headname: 'GitHUb',
             caption: githubCaptions,
           ),
-          Gyapp(gyap: 30),
+          gyap(30, 0),
           ServiceCard(
             logo: gitlogopic,
             headname: 'Git',
             caption: gitCaptions,
           ),
-          Gyapp(gyap: 30),
+          gyap(30, 0),
           ServiceCard(
             logo: firebaselogopic,
             headname: 'Firebase',
             caption: firebasecaptions,
           ),
-          Gyapp(gyap: 30),
+          gyap(30, 0),
           ServiceCard(
             logo: vslogopic,
             headname: 'Vs Code',
             caption: vsCption,
           ),
-          Gyapp(gyap: 30),
+          gyap(30, 0),
         ]),
       ),
     );
@@ -80,7 +78,7 @@ class ServiceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
+      height: 400,
       width: 350,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
@@ -93,22 +91,20 @@ class ServiceCard extends StatelessWidget {
         child: Column(
           children: [
             CircleAvatar(
-              radius: 30,
+              radius: 25,
               backgroundImage: AssetImage(
                 logo,
               ),
             ),
-            Gyapp(gyap: 20),
-            SkillText(
-              textname: headname,
-              txtweight: FontWeight.bold,
-              txtSize: 20,
+            gyap(20, 0),
+            Text(
+              headname,
+              style: blacksubHeadStyle,
             ),
-            Gyapp(gyap: 10),
-            SkillText(
-              textname: caption,
-              txtweight: FontWeight.normal,
-              txtSize: 17,
+            gyap(20, 0),
+            Text(
+              caption,
+              style: blacksmallTexts,
             ),
           ],
         ),

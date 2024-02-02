@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/assets.dart';
-import 'package:portfolio/forSkillText.dart';
-import 'package:portfolio/gyap.dart';
-import 'package:portfolio/skills.dart';
+import 'package:portfolio/components/MyText.dart';
+import 'package:portfolio/components/assets.dart';
+import 'package:portfolio/components/skills.dart';
 
 class ScreenThree extends StatefulWidget {
   const ScreenThree({super.key});
@@ -16,25 +15,23 @@ class _ScreenThreeState extends State<ScreenThree> {
   Widget build(BuildContext context) {
     return Card(
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(8.0),
         child: SingleChildScrollView(
           child: Column(children: [
-            Gyapp(gyap: 190),
-            SkillText(
-                textname: 'Skills', txtweight: FontWeight.bold, txtSize: 30),
-            const Text('_____*_____'),
-            Gyapp(gyap: 30),
-            SkillText(
-                textname: 'Flutter Developer',
-                txtweight: FontWeight.w700,
-                txtSize: 22),
-            Gyapp(gyap: 15),
-            SkillText(
-              textname: skilltitles,
-              txtweight: FontWeight.normal,
-              txtSize: 18,
+            gyap(190, 0),
+            Text(
+              'Skills',
+              style: BlckHeadStyle,
             ),
-            Gyapp(gyap: 20),
+            Text('_____*_____'),
+            gyap(30, 0),
+            Text('Flutter Development', style: blacksubHeadStyle),
+            gyap(15, 0),
+            Text(
+              skilltitles,
+              style: blacksmallTexts,
+            ),
+            gyap(20, 0),
             const Skills()
           ]),
         ),
