@@ -21,15 +21,19 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        foregroundColor: Colors.white,
         backgroundColor: const Color.fromARGB(255, 7, 61, 116),
-        leading: Container(
-          child: Image.asset(
-            flutterkilipic,
-            fit: BoxFit.cover,
-          ),
+        leading: Image.asset(
+          flutterkilipic,
+          fit: BoxFit.cover,
         ),
         leadingWidth: 90,
-        title: Text('Muhammed Faizal v \n flutter developer ', style: NameHed),
+        title: Column(
+          children: [
+            Text('Muhammed Faizal v', style: NameHed),
+            Text('flutter developer', style: smallTexts),
+          ],
+        ),
         toolbarHeight: 100,
       ),
       body: ListView(
@@ -62,10 +66,11 @@ class _HomePageState extends State<HomePage> {
       ),
       endDrawer: Container(
         alignment: Alignment.center,
-        height: 410,
+        height: 400,
         width: 350,
         child: const Drawer(
           backgroundColor: Colors.white70,
+          surfaceTintColor: Colors.yellow,
           child: DrawerList(),
         ),
       ),

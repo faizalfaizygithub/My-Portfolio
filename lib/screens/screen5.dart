@@ -34,9 +34,9 @@ class _ScreenFiveState extends State<ScreenFive> {
             Text('_____*_____'),
             gyap(30, 0),
             PortfolioCard(
-              photo: shoppingpic,
+              photo: cleanapppic,
               photoAction: () {
-                _launchURL('https://vkstore07.web.app');
+                _launchURL('https://mrcleanapp03.web.app/');
               },
             ),
             gyap(30, 0),
@@ -44,6 +44,13 @@ class _ScreenFiveState extends State<ScreenFive> {
               photo: bloodpic,
               photoAction: () {
                 _launchURL('https://blooddonationapp-a24fe.web.app');
+              },
+            ),
+            gyap(30, 0),
+            PortfolioCard(
+              photo: straypic,
+              photoAction: () {
+                _launchURL('https://savestraydogs-123.web.app/');
               },
             ),
             gyap(30, 0),
@@ -76,13 +83,13 @@ class PortfolioCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 280,
+      height: MediaQuery.of(context).size.height * 0.45,
       width: 350,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: Colors.white,
           boxShadow: const [
-            BoxShadow(color: Colors.black, offset: Offset(7, 6), blurRadius: 15)
+            BoxShadow(color: Colors.black, offset: Offset(6, 4), blurRadius: 10)
           ]),
       child: Column(children: [
         SizedBox(

@@ -59,8 +59,7 @@ TextStyle get blacksubHeadStyle {
 
 TextStyle get smallTexts {
   return GoogleFonts.lato(
-    textStyle: const TextStyle(
-        fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),
+    textStyle: const TextStyle(fontSize: 12, color: Colors.white),
   );
 }
 
@@ -79,8 +78,8 @@ TextStyle get BlckHeadStyle {
 }
 
 TextStyle get NameHed {
-  return GoogleFonts.aBeeZee(
+  return GoogleFonts.tinos(
     textStyle: const TextStyle(
-        fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white),
+        fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
   );
 }

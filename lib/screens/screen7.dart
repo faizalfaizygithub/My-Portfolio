@@ -11,6 +11,10 @@ class ScreenSeven extends StatefulWidget {
 }
 
 class _ScreenSevenState extends State<ScreenSeven> {
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _msgController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -18,9 +22,21 @@ class _ScreenSevenState extends State<ScreenSeven> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         gyap(30, 0),
-        TextFildCard(textName: 'Name', count: 1),
-        TextFildCard(textName: 'Email', count: 1),
-        TextFildCard(textName: 'Message', count: 5),
+        TextFildCard(
+          textName: 'Name',
+          count: 1,
+          controller: _nameController,
+        ),
+        TextFildCard(
+          textName: 'Email',
+          count: 1,
+          controller: _emailController,
+        ),
+        TextFildCard(
+          textName: 'Message',
+          count: 5,
+          controller: _msgController,
+        ),
         gyap(30, 0),
         Padding(
           padding: const EdgeInsets.all(8.0),
@@ -40,13 +56,18 @@ class _ScreenSevenState extends State<ScreenSeven> {
 class TextFildCard extends StatelessWidget {
   String textName;
   int count;
-
-  TextFildCard({required this.textName, required this.count});
+  TextEditingController controller;
+  TextFildCard(
+      {super.key,
+      required this.textName,
+      required this.controller,
+      required this.count});
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TextField(
+        controller: controller,
         keyboardType: TextInputType.text,
         decoration: InputDecoration(
           filled: true,

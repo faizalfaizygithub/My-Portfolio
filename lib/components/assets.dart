@@ -7,6 +7,8 @@ String vkpic = 'assets/images/vk.webp';
 String shoppic = 'assets/images/shop.webp';
 String shop2pic = 'assets/images/shop.jpg';
 String shoppingpic = 'assets/images/shopping.jpg';
+String cleanapppic = 'assets/images/logo.jpg';
+String straypic = 'assets/images/icon.jpg';
 //logo
 String home1pic = 'assets/images/home1.jpg';
 String home2pic = 'assets/images/home2.png';

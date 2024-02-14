@@ -6,50 +6,53 @@ class DrawerList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      ListOfDrawer(
-        icon: Icons.home,
-        txtname: 'Home',
-        txtAction: () {
-          Navigator.of(context).pushNamed('/HomePage');
-        },
-      ),
-      ListOfDrawer(
-        icon: Icons.person_2,
-        txtname: 'About Me',
-        txtAction: () {
-          Navigator.of(context).pushNamed('/AboutmePage');
-        },
-      ),
-      ListOfDrawer(
-        icon: Icons.now_widgets_rounded,
-        txtname: 'Skills',
-        txtAction: () {
-          Navigator.of(context).pushNamed('/SkillsPage');
-        },
-      ),
-      ListOfDrawer(
-        icon: Icons.miscellaneous_services_rounded,
-        txtname: 'Services',
-        txtAction: () {
-          Navigator.of(context).pushNamed('/ServicesPage');
-        },
-      ),
-      ListOfDrawer(
-        icon: Icons.work,
-        txtname: 'Portfolio',
-        txtAction: () {
-          Navigator.of(context).pushNamed('/PortfolioPage');
-        },
-      ),
-      ListOfDrawer(
-        icon: Icons.contact_support,
-        txtname: 'Contact',
-        txtAction: () {
-          Navigator.of(context).pushNamed('/ContactPage');
-        },
-      ),
-    ]);
+    return Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ListOfDrawer(
+            icon: Icons.home,
+            txtname: 'Home',
+            txtAction: () {
+              Navigator.of(context).pushNamed('/HomePage');
+            },
+          ),
+          ListOfDrawer(
+            icon: Icons.person_2,
+            txtname: 'About Me',
+            txtAction: () {
+              Navigator.of(context).pushNamed('/AboutmePage');
+            },
+          ),
+          ListOfDrawer(
+            icon: Icons.now_widgets_rounded,
+            txtname: 'Skills',
+            txtAction: () {
+              Navigator.of(context).pushNamed('/SkillsPage');
+            },
+          ),
+          ListOfDrawer(
+            icon: Icons.miscellaneous_services_rounded,
+            txtname: 'Services',
+            txtAction: () {
+              Navigator.of(context).pushNamed('/ServicesPage');
+            },
+          ),
+          ListOfDrawer(
+            icon: Icons.work,
+            txtname: 'Portfolio',
+            txtAction: () {
+              Navigator.of(context).pushNamed('/PortfolioPage');
+            },
+          ),
+          ListOfDrawer(
+            icon: Icons.contact_support,
+            txtname: 'Contact',
+            txtAction: () {
+              Navigator.of(context).pushNamed('/ContactPage');
+            },
+          ),
+        ]);
   }
 }
 

@@ -77,7 +77,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                     text: 'Download Cv',
                     action: () {
                       _launchURL(
-                          'https://drive.google.com/file/d/15fb8guylWaFatfDM98RpQ-BQKThE7kTH/view?usp=sharing');
+                          'https://drive.google.com/file/d/1EnuRXY2qKClFMNiFjL5oIyoOAkxZVY7F/view?usp=sharing');
                     }),
                 Buttons(
                     color: Color.fromARGB(255, 177, 160, 8),
