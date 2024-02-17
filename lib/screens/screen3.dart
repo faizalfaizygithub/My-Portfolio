@@ -15,7 +15,7 @@ class _ScreenThreeState extends State<ScreenThree> {
   Widget build(BuildContext context) {
     return Card(
       child: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
           child: Column(children: [
             gyap(190, 0),
@@ -23,7 +23,7 @@ class _ScreenThreeState extends State<ScreenThree> {
               'Skills',
               style: BlckHeadStyle,
             ),
-            Text('_____*_____'),
+            const Text('_____*_____'),
             gyap(30, 0),
             Text('Flutter Development', style: blacksubHeadStyle),
             gyap(15, 0),

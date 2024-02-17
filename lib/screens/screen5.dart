@@ -84,7 +84,7 @@ class PortfolioCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.45,
-      width: 350,
+      width: MediaQuery.of(context).size.width * 0.9,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: Colors.white,

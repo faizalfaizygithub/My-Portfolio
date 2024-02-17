@@ -23,9 +23,9 @@ class MyText extends StatelessWidget {
 }
 
 TextStyle get buttonStyle {
-  return GoogleFonts.lato(
+  return GoogleFonts.tinos(
     textStyle: const TextStyle(
-        fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white),
+        fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),
   );
 }
 
@@ -65,8 +65,7 @@ TextStyle get smallTexts {
 
 TextStyle get blacksmallTexts {
   return GoogleFonts.lato(
-    textStyle: const TextStyle(
-        fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),
+    textStyle: const TextStyle(fontSize: 12, color: Colors.black),
   );
 }
 
@@ -81,5 +80,11 @@ TextStyle get NameHed {
   return GoogleFonts.tinos(
     textStyle: const TextStyle(
         fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
+  );
+}
+
+TextStyle get dbtxt {
+  return GoogleFonts.lato(
+    textStyle: TextStyle(fontSize: 12, color: Colors.grey),
   );
 }

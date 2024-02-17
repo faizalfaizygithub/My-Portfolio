@@ -11,66 +11,52 @@ class Skills extends StatefulWidget {
 class _SkillsState extends State<Skills> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          '* Android & ios developer',
-          style: blacksubHeadStyle,
-        ),
-        const SliderDa(),
-        Text(
-          '* FrontEnd & BackEnd ',
-          style: blacksubHeadStyle,
-        ),
-        const SliderDa(),
-        Text(
-          '* Dart ',
-          style: blacksubHeadStyle,
-        ),
-        const SliderDa(),
-        Text(
-          '* Git & GitHub',
-          style: blacksubHeadStyle,
-        ),
-        const SliderDa(),
-        Text(
-          '* Firbase',
-          style: blacksubHeadStyle,
-        ),
-        const SliderDa(),
-        Text(
-          '* ThirdParty Libraries',
-          style: blacksubHeadStyle,
-        ),
-        const SliderDa(),
-      ],
-    );
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Text(
+        '* Android & ios developer',
+        style: blacksubHeadStyle,
+      ),
+      _divider(50),
+      gyap(20, 0),
+      Text(
+        '* FrontEnd & BackEnd ',
+        style: blacksubHeadStyle,
+      ),
+      _divider(50),
+      gyap(20, 0),
+      Text(
+        '* Dart ',
+        style: blacksubHeadStyle,
+      ),
+      _divider(80),
+      gyap(20, 0),
+      Text(
+        '* Git & GitHub',
+        style: blacksubHeadStyle,
+      ),
+      _divider(50),
+      gyap(20, 0),
+      Text(
+        '* Firbase',
+        style: blacksubHeadStyle,
+      ),
+      _divider(50),
+      gyap(20, 0),
+      Text(
+        '* ThirdParty Libraries',
+        style: blacksubHeadStyle,
+      ),
+      _divider(100),
+      gyap(50, 0),
+    ]);
   }
-}
 
-class SliderDa extends StatefulWidget {
-  const SliderDa({super.key});
-
-  @override
-  State<SliderDa> createState() => _SliderDaState();
-}
-
-class _SliderDaState extends State<SliderDa> {
-  double _currentSliderValue = 500;
-  @override
-  Widget build(BuildContext context) {
-    return Slider(
-        thumbColor: Colors.white,
-        autofocus: false,
-        activeColor: const Color.fromARGB(255, 20, 13, 13),
-        value: _currentSliderValue,
-        min: 0,
-        max: 600,
-        onChanged: (value) {
-          setState(() {
-            _currentSliderValue = value;
-          });
-        });
+  _divider(double endValue) {
+    return Divider(
+      thickness: 4,
+      color: const Color.fromARGB(255, 7, 61, 116),
+      indent: 10,
+      endIndent: endValue,
+    );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/MyText.dart';
 import 'package:portfolio/components/button.dart';
@@ -14,6 +15,17 @@ class _ScreenSevenState extends State<ScreenSeven> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _msgController = TextEditingController();
+
+  final CollectionReference portfolio =
+      FirebaseFirestore.instance.collection('portfolio');
+  void addToDb() {
+    final data = {
+      'name': _nameController.text,
+      'email': _emailController.text,
+      'message': _msgController.text,
+    };
+    portfolio.add(data);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,14 +54,46 @@ class _ScreenSevenState extends State<ScreenSeven> {
           padding: const EdgeInsets.all(8.0),
           child: Buttons(
             text: 'Submit',
-            action: () {},
-            color: Color.fromARGB(255, 177, 160, 8),
+            action: () async {
+              try {
+                if (_msgController.text.isNotEmpty)
+                // ignore: curly_braces_in_flow_control_structures
+                if (_emailController.text.isNotEmpty) {
+                  if (_nameController.text.isNotEmpty) {
+                    addToDb();
+                    Navigator.of(context).pushNamed(
+                      '/SubmissionPage',
+                    );
+                  } else {
+                    incompleateData();
+                  }
+                }
+              } catch (e) {
+                print('compleate details');
+              }
+            },
+            color: const Color.fromARGB(255, 177, 160, 8),
           ),
         ),
         gyap(100, 0),
-        TriangleWidget()
+        const TriangleWidget()
       ],
     ));
+  }
+
+  void incompleateData() {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            icon: Icon(Icons.dangerous_rounded),
+            iconColor: Colors.red,
+            title: Text(
+              'Please full fill your form',
+              style: blacksmallTexts,
+            ),
+          );
+        });
   }
 }
 
@@ -73,7 +117,7 @@ class TextFildCard extends StatelessWidget {
           filled: true,
           fillColor: Colors.white,
           label: Text(textName),
-          labelStyle: blacksmallTexts,
+          labelStyle: dbtxt,
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
               color: Colors.grey.shade100,

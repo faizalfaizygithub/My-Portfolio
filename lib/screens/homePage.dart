@@ -31,21 +31,24 @@ class _HomePageState extends State<HomePage> {
         title: Column(
           children: [
             Text('Muhammed Faizal v', style: NameHed),
-            Text('flutter developer', style: smallTexts),
+            Text('Flutter developer', style: smallTexts),
           ],
         ),
         toolbarHeight: 100,
       ),
-      body: ListView(
-        children: const [
-          ScreenOne(),
-          ScreenTwo(),
-          ScreenThree(),
-          ScreenFour(),
-          ScreenFive(),
-          ScreenSix(),
-        ],
-      ),
+      body: Stack(children: [
+        BgPhoto(),
+        ListView(
+          children: const [
+            ScreenOne(),
+            ScreenTwo(),
+            ScreenThree(),
+            ScreenFour(),
+            ScreenFive(),
+            ScreenSix(),
+          ],
+        ),
+      ]),
       floatingActionButton: ClipRRect(
         borderRadius: const BorderRadius.all(Radius.circular(50)),
         child: Container(
@@ -66,11 +69,10 @@ class _HomePageState extends State<HomePage> {
       ),
       endDrawer: Container(
         alignment: Alignment.center,
-        height: 400,
+        height: MediaQuery.of(context).size.height * 0.7,
         width: 350,
         child: const Drawer(
           backgroundColor: Colors.white70,
-          surfaceTintColor: Colors.yellow,
           child: DrawerList(),
         ),
       ),

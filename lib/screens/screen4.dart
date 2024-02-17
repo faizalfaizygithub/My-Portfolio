@@ -54,8 +54,14 @@ class _ScreenFourState extends State<ScreenFour> {
           gyap(30, 0),
           ServiceCard(
             logo: vslogopic,
-            headname: 'Vs Code',
+            headname: 'VS Code',
             caption: vsCption,
+          ),
+          gyap(30, 0),
+          ServiceCard(
+            logo: 'assets/images/auth.jpg',
+            headname: 'Authentication',
+            caption: authtitles,
           ),
           gyap(30, 0),
         ]),
@@ -78,8 +84,8 @@ class ServiceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.4,
-      width: MediaQuery.of(context).size.width * 0.4,
+      height: 330,
+      width: MediaQuery.of(context).size.width * 0.9,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: Colors.white,

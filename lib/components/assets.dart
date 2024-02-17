@@ -39,6 +39,8 @@ String gitlogopic = 'assets/images/git1.png';
 String githublogopic = 'assets/images/github.png';
 String vslogopic = 'assets/images/vs.png';
 //caption
+String authtitles =
+    "Authentication is a term that refers to the process of proving that some fact or some document is genuine. In computer science, this term is typically associated with proving a user's 'identity";
 String abouttitle =
     'A bright, talented ,ambitious and self motivated app developer with a strong technical background who possesses self discipline and the ability to work with the minimum of supervision . Able to play a key role throughout a sites development to ensure maximum accessability, customer experiance and usubility. A good team player who thrives on creating engaging creative solutions .is deadline oriented and has the ability to produce detailed technical specifications from client requirments.';
 String skilltitles =

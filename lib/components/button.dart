@@ -14,7 +14,7 @@ class Buttons extends StatelessWidget {
         backgroundColor: MaterialStatePropertyAll(color),
       ),
       onPressed: action,
-      child: Text(text, style: smallTexts),
+      child: Text(text, style: buttonStyle),
     );
   }
 }
