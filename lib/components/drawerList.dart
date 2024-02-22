@@ -1,15 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/MyText.dart';
+import 'package:portfolio/components/socialMedias.dart';
 
-class DrawerList extends StatelessWidget {
+class DrawerList extends StatefulWidget {
   const DrawerList({super.key});
 
+  @override
+  State<DrawerList> createState() => _DrawerListState();
+}
+
+class _DrawerListState extends State<DrawerList> {
   @override
   Widget build(BuildContext context) {
     return Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          const CircleAvatar(
+            backgroundImage: AssetImage('assets/icon/propic.jpg'),
+            maxRadius: 60,
+          ),
+          gyap(10, 0),
+          SocialMedia(),
+          gyap(10, 0),
+          const Divider(
+            thickness: 2,
+            color: Colors.black54,
+            indent: 40,
+            endIndent: 40,
+          ),
           ListOfDrawer(
             icon: Icons.home,
             txtname: 'Home',

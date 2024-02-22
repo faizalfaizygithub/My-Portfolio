@@ -84,7 +84,7 @@ class ServiceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 320,
+      height: 335,
       width: 350,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),

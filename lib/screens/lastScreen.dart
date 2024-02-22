@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/components/assets.dart';
+import 'package:portfolio/components/socialMedias.dart';
 
 class TriangleWidget extends StatelessWidget {
   const TriangleWidget({super.key});
@@ -26,6 +27,7 @@ class TriangleWidget extends StatelessWidget {
               height: 120,
             ),
           ),
+          Positioned(bottom: 22, child: SocialMedia()),
           const Align(
             alignment: Alignment.topCenter,
             child: Text(

@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
       ),
       endDrawer: Container(
         alignment: Alignment.center,
-        height: MediaQuery.of(context).size.height * 0.7,
+        height: MediaQuery.of(context).size.height * 0.9,
         width: 350,
         child: const Drawer(
           backgroundColor: Colors.white70,
