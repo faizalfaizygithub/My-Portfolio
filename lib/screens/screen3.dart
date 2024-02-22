@@ -14,6 +14,7 @@ class _ScreenThreeState extends State<ScreenThree> {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Color.fromARGB(255, 221, 223, 224),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(

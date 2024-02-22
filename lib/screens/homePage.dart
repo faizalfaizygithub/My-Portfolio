@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
         title: Column(
           children: [
             Text('Muhammed Faizal v', style: NameHed),
-            Text('Flutter developer', style: smallTexts),
+            Text('Flutter developer', style: buttonStyle),
           ],
         ),
         toolbarHeight: 100,

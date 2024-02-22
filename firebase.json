@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "fzyportfoilo",
     "public": "build/web",
     "ignore": [
       "firebase.json",

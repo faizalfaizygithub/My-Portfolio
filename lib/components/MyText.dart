@@ -59,13 +59,13 @@ TextStyle get blacksubHeadStyle {
 
 TextStyle get smallTexts {
   return GoogleFonts.lato(
-    textStyle: const TextStyle(fontSize: 12, color: Colors.white),
+    textStyle: const TextStyle(color: Colors.white),
   );
 }
 
 TextStyle get blacksmallTexts {
   return GoogleFonts.lato(
-    textStyle: const TextStyle(fontSize: 12, color: Colors.black),
+    textStyle: const TextStyle(color: Colors.black),
   );
 }
 
