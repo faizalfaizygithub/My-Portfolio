@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "fzyportfoilo",
+    "site": "myportfolio-9730f",
     "public": "build/web",
     "ignore": [
       "firebase.json",
